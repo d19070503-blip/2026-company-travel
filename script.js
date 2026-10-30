@@ -71,6 +71,10 @@ form?.addEventListener('submit', async (event) => {
     return;
   }
 
+  const submitButton = form.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  showMessage('正在送出報名請求…');
+
   try {
     const result = await saveRegistration(payload);
     if (result.confirmed) {
@@ -82,5 +86,7 @@ form?.addEventListener('submit', async (event) => {
   } catch (error) {
     console.error(error);
     showMessage('資料送出發生錯誤，請稍後再試。', true);
+  } finally {
+    submitButton.disabled = false;
   }
 });

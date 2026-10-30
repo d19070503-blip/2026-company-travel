@@ -25,6 +25,9 @@ Web App URL 已設定於 `script.js`。部署設定為「執行身分：我」�
 
 瀏覽器對 Apps Script 的跨來源回應有限制，因此表單使用 `no-cors` 方式送出。送出後瀏覽器無法讀取 Apps Script 的回應；請到試算表確認資料是否新增，再將報名視為成功。
 
+- Web App：https://script.google.com/macros/s/AKfycbzNG4BmUl_JVWMVLLbvMRF_UcgiXw9gHOvr0P1ESIiPJdMO_SylPQxUcWOeX2FsNteI/exec
+- Google Sheet：`2026_公司旅遊`
+
 ## 主要檔案
 
 - `index.html`：活動首頁與報名表單

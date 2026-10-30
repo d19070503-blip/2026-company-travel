@@ -34,14 +34,14 @@ Web App URL 已設定於 `script.js`。部署設定為「執行身分：我」�
 - `styles.css`：RWD 排版與風格設計
 - `script.js`：輪播圖與 Apps Script 表單送出邏輯
 - `cover.jpg`：16:9 活動封面圖
-- `Code.gs`：Google Apps Script 寫入資料到 Sheet
+- `apps-script/Code.gs`：本機 Apps Script 程式原始碼（此目錄不納入 Git 追蹤）
 
-## 系統維護文件
+## Apps Script 與本機文件
 
-- [Word 維護手冊](./docx/系統維護手冊.docx)
-- [Markdown 維護手冊](./docx/系統維護手冊.md)
+- Apps Script 專案：[開啟編輯器](https://script.google.com/home/projects/14dwQ1uoQ-wfHph5B_W7Kj6OwYgiqZZWCc3RzIxnrSTY4a-QXNtqLWmqM/edit)
+- 本機系統維護文件位於 `docx/`，此目錄不納入 Git 追蹤。
 
 ## 注意事項
 
-- 不要將 `spec/` 資料夾推送至 GitHub repo。
+- `spec/`、`docx/`、`apps-script/` 資料夾不納入 Git 追蹤。
 - 若需要 Google 登入或 GitHub 授權，請先完成登入後再繼續部署。

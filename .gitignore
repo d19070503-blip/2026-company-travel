@@ -1,3 +1,5 @@
 spec/
+/docx/
+/apps-script/
 .DS_Store
 node_modules/

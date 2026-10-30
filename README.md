@@ -15,7 +15,9 @@ python -m http.server 8000
 
 ## GitHub Pages 網址
 
-> 待完成 GitHub Pages 部署後，將正式 URL 填寫於此處。
+https://d19070503-blip.github.io/2026_-/
+
+> GitHub repo 名稱因 GitHub 只接受 ASCII/URL-安全字元，實際建立為 `2026_-`；其內容與 Google Sheet 檔名 `2026_公司旅遊` 對應，且 Pages URL 已可正常訪問。
 
 ## Google Apps Script 部署方式
 

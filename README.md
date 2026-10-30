@@ -15,9 +15,9 @@ python -m http.server 8000
 
 ## GitHub Pages 網址
 
-https://d19070503-blip.github.io/2026_-/
+https://d19070503-blip.github.io/2026-company-travel/
 
-> GitHub repo 名稱因 GitHub 只接受 ASCII/URL-安全字元，實際建立為 `2026_-`；其內容與 Google Sheet 檔名 `2026_公司旅遊` 對應，且 Pages URL 已可正常訪問。
+> GitHub repo 名稱已更新為 `2026-company-travel`，符合 GitHub 命名限制；網站內容仍與 Google Sheet 檔名 `2026_公司旅遊` 對應。 Pages URL 已同步更新。
 
 ## Google Apps Script 部署方式
 

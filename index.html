@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2026 宇宙科技公司員工旅遊</title>
+    <meta
+      name="description"
+      content="2026 宇宙科技公司員工旅遊活動報名，歡迎加入年度員工旅遊行程。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero" aria-label="活動宣傳輪播圖">
+        <div class="carousel" aria-live="polite">
+          <div class="slides">
+            <div class="slide active">
+              <img src="cover.jpg" alt="2026 宇宙科技公司員工旅遊活動封面" />
+            </div>
+            <div class="slide">
+              <img src="cover.jpg" alt="2026 宇宙科技公司員工旅遊活動封面" />
+            </div>
+            <div class="slide">
+              <img src="cover.jpg" alt="2026 宇宙科技公司員工旅遊活動封面" />
+            </div>
+          </div>
+          <div class="carousel-dots" aria-label="輪播圖導覽點">
+            <button class="dot active" type="button" aria-label="顯示第1張"></button>
+            <button class="dot" type="button" aria-label="顯示第2張"></button>
+            <button class="dot" type="button" aria-label="顯示第3張"></button>
+          </div>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="row title-row" aria-labelledby="event-title">
+          <h1 id="event-title">2026 宇宙科技公司員工旅遊</h1>
+        </section>
+
+        <section class="row image-row" aria-label="活動圖片區塊">
+          <div class="cover-card">
+            <img src="cover.jpg" alt="宇宙科技公司員工旅遊活動大圖" />
+          </div>
+        </section>
+
+        <section class="row details-row" aria-label="活動資訊與報名表單">
+          <div class="schedule-panel">
+            <h2>活動流程</h2>
+            <ul class="schedule-list">
+              <li><span class="time">8:00</span><span class="label">報到</span></li>
+              <li><span class="time">9:00</span><span class="label">場次一</span></li>
+              <li><span class="time">10:00</span><span class="label">break time</span></li>
+              <li><span class="time">10:30</span><span class="label">場次二</span></li>
+              <li><span class="time">11:30</span><span class="label">Q&amp;A</span></li>
+              <li><span class="time">12:00</span><span class="label">活動結束</span></li>
+            </ul>
+          </div>
+
+          <div class="divider" aria-hidden="true">|</div>
+
+          <div class="form-panel">
+            <h2>立即報名</h2>
+            <form id="signupForm" novalidate>
+              <div class="field-group">
+                <label for="name">姓名</label>
+                <input id="name" name="name" type="text" placeholder="請輸入姓名" required />
+              </div>
+
+              <div class="field-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="example@mail.com" required />
+              </div>
+
+              <div class="field-group">
+                <label for="department">所屬單位</label>
+                <input id="department" name="department" type="text" placeholder="請輸入所屬單位" />
+              </div>
+
+              <div class="field-group">
+                <label for="phone">手機</label>
+                <input id="phone" name="phone" type="tel" inputmode="numeric" placeholder="0912-345-678" required />
+              </div>
+
+              <div class="field-group">
+                <label for="title">職稱</label>
+                <input id="title" name="title" type="text" placeholder="請輸入職稱" />
+              </div>
+
+              <button type="submit" class="submit-btn">送出報名</button>
+            </form>
+            <p id="formMessage" class="form-message" aria-live="polite"></p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

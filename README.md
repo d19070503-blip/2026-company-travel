@@ -36,6 +36,11 @@ Web App URL 已設定於 `script.js`。部署設定為「執行身分：我」�
 - `cover.jpg`：16:9 活動封面圖
 - `Code.gs`：Google Apps Script 寫入資料到 Sheet
 
+## 系統維護文件
+
+- [Word 維護手冊](./docx/系統維護手冊.docx)
+- [Markdown 維護手冊](./docx/系統維護手冊.md)
+
 ## 注意事項
 
 - 不要將 `spec/` 資料夾推送至 GitHub repo。

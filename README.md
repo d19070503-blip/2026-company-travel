@@ -35,6 +35,7 @@ Web App URL 已設定於 `script.js`。部署設定為「執行身分：我」�
 - `script.js`：輪播圖與 Apps Script 表單送出邏輯
 - `cover.jpg`：16:9 活動封面圖
 - `apps-script/Code.gs`：本機 Apps Script 程式原始碼（此目錄不納入 Git 追蹤）
+- `appsscript.json`：本機 Apps Script 專案設定（不納入 Git 追蹤）
 
 ## Apps Script 與本機文件
 
@@ -43,5 +44,5 @@ Web App URL 已設定於 `script.js`。部署設定為「執行身分：我」�
 
 ## 注意事項
 
-- `spec/`、`docx/`、`apps-script/` 資料夾不納入 Git 追蹤。
+- `spec/`、`docx/`、`apps-script/` 資料夾及 `appsscript.json` 不納入 Git 追蹤。
 - 若需要 Google 登入或 GitHub 授權，請先完成登入後再繼續部署。

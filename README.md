@@ -1,6 +1,6 @@
 # 2026 宇宙科技公司員工旅遊
 
-活動報名網站，採用靜態 HTML + CSS + JavaScript，並預留 Google Apps Script Web App 端點以將報名資料同步至 Google Sheet：`2026_公司旅遊`。
+活動報名網站，採用靜態 HTML + CSS + JavaScript，已連接 Google Apps Script Web App，將報名資料同步至 Google Sheet：`2026_公司旅遊`。
 
 ## 本機預覽
 
@@ -21,17 +21,15 @@ https://d19070503-blip.github.io/2026-company-travel/
 
 ## Google Apps Script 部署方式
 
-1. 在 Google Sheet 中開啟 Apps Script 編輯器。
-2. 建立 `appsscript.json` 與 `Code.gs` 內容，並將 Sheet 名稱設定為 `2026_公司旅遊`。
-3. 部署為網頁應用程式 (Web App)。
-4. 取得 Web App URL，並替換 `script.js` 中的 `PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE`。
-5. 確認 `手機` 欄位使用文字格式，避免前綴 0 被轉為數字。
+Web App URL 已設定於 `script.js`。部署設定為「執行身分：我」及「誰可以存取：所有人」，程式會寫入指定試算表及工作表 `2026_公司旅遊`，並將手機欄設定為文字格式。
+
+瀏覽器對 Apps Script 的跨來源回應有限制，因此表單使用 `no-cors` 方式送出。送出後瀏覽器無法讀取 Apps Script 的回應；請到試算表確認資料是否新增，再將報名視為成功。
 
 ## 主要檔案
 
 - `index.html`：活動首頁與報名表單
 - `styles.css`：RWD 排版與風格設計
-- `script.js`：輪播圖與表單送出邏輯
+- `script.js`：輪播圖與 Apps Script 表單送出邏輯
 - `cover.jpg`：16:9 活動封面圖
 - `Code.gs`：Google Apps Script 寫入資料到 Sheet
 

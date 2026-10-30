@@ -35,31 +35,22 @@ function showMessage(message, isError = false) {
 }
 
 async function saveRegistration(payload) {
-  const appsScriptEndpoint = 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
+  const appsScriptEndpoint = 'https://script.google.com/macros/s/AKfycbzNG4BmUl_JVWMVLLbvMRF_UcgiXw9gHOvr0P1ESIiPJdMO_SylPQxUcWOeX2FsNteI/exec';
 
-  if (appsScriptEndpoint && appsScriptEndpoint !== 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE') {
-    const response = await fetch(appsScriptEndpoint, {
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    });
+  const response = await fetch(appsScriptEndpoint, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'text/plain;charset=UTF-8'
+    },
+    body: JSON.stringify(payload)
+  });
 
-    if (!response.ok) {
-      throw new Error('Google Apps Script submission failed');
-    }
-
-    return { status: 'success', source: 'apps-script' };
+  if (response.type === 'opaque') {
+    return { status: 'sent', confirmed: false, source: 'apps-script' };
   }
 
-  const storageKey = 'travel-registration-fallback';
-  const existing = JSON.parse(localStorage.getItem(storageKey) || '[]');
-  existing.push(payload);
-  localStorage.setItem(storageKey, JSON.stringify(existing));
-
-  return { status: 'success', source: 'local-storage' };
+  throw new Error('Google Apps Script submission did not return an accessible response');
 }
 
 form?.addEventListener('submit', async (event) => {
@@ -81,9 +72,13 @@ form?.addEventListener('submit', async (event) => {
   }
 
   try {
-    await saveRegistration(payload);
-    form.reset();
-    showMessage('報名成功，資料已送出。');
+    const result = await saveRegistration(payload);
+    if (result.confirmed) {
+      form.reset();
+      showMessage('報名成功，資料已寫入 Google 試算表。');
+    } else {
+      showMessage('報名請求已送出，但無法讀取 Google 回覆。請先確認試算表，勿立即重送以免重複。');
+    }
   } catch (error) {
     console.error(error);
     showMessage('資料送出發生錯誤，請稍後再試。', true);
